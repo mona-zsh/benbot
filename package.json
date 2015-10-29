@@ -1,0 +1,47 @@
+{
+    "name": "benbot",
+    "version": "1.0.0",
+    "description": "a bot that says things Benjamino Grohe would say",
+    "author": "Mona",
+    "bin": {
+        "module-name": "./bin/module-name"
+    },
+    "scripts": {
+        "test": "vows --spec --isolate",
+        "start": "node benbot.js",
+        "predeploy": "echo im about to deploy the benbot",
+        "postdeploy": "echo ive deployed the benbot",
+        "prepublish": "coffee --bare --compile --output ./ ./*.coffee"
+    },
+    "main": "./benbot.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mona-zsh/benbot"
+    },
+    "bugs": {
+        "url": "https://github.com/mona-zsh/benbot/issues"
+    },
+    "keywords": [
+        "slackbot"
+    ],
+    "dependencies": {
+        "coffee-script": "*",
+        "linebyline": "*",
+        "pg": "*",
+        "readline": "*",
+        "slack-client": "*"
+    },
+    "devDependencies": {
+        "vows": "^0.7.0",
+        "assume": "<1.0.0 || >=2.3.1 <2.4.5 || >=2.5.2 <3.0.0",
+        "pre-commit": "*"
+    },
+    "preferGlobal": true,
+    "private": true,
+    "subdomain": "foobar",
+    "analyze": true,
+    "license": "MIT",
+    "scripts": {
+      "start": "node benbot.js"
+    }
+}
